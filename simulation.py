@@ -1,8 +1,12 @@
-# Initialization
-random_walk = [0]
+import matplotlib.pyplot as plt
+
+
+
+#inizialization
+random_walks = [0]
 
 for x in range(100) :
-    step = random_walk[-1]
+    step = random_walks[-1]
     dice = np.random.randint(1,7)
 
     if dice <= 2:
@@ -12,13 +16,10 @@ for x in range(100) :
     else:
         step = step + np.random.randint(1,7)
 
-    random_walk.append(step)
+    random_walks.append(step)
 
-# Import matplotlib.pyplot as plt
-import matplotlib.pyplot as plt
 
-# Plot random_walk
-plt.plot(random_walk)
+plt.plot(random_walks)
 
-# Show the plot
+
 plt.show()
